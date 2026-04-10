@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void print_array(int arr[][3]) {
+void print_array(int arr[2][3]) {
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 3; j++) {
             printf("%d ", arr[i][j]);
@@ -13,8 +13,8 @@ void print_array(int arr[][3]) {
 int main() {
     int arr0[2][3] = {1, 2, 3, 4, 5, 6};
     int arr1[2][3] = {{1, 2, 3}, {4, 5, 6}};
-    int arr2[2][3] = {{1, 2, 3, 4, 5, 6}};
-    int arr3[2][3] = {{1, 2}, {4}};
+    int arr2[2][3] = {{1, 2, 3}, {4}};   // ← 여기 중요
+    int arr3[2][3] = {{1, 2}, {4}};      // ← 여기 중요
 
     print_array(arr0);
     print_array(arr1);

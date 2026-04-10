@@ -6,21 +6,14 @@ int main() {
         {4, 5, 6}
     };
 
-    int (*p1)[2][3] = &arr;
-    int (*p2)[3] = &arr[0];
-    int *p3 = &arr[0][0];
+    printf("%p\n", (void *)&arr);
+    printf("%p\n", (void *)&arr[0]);
+    printf("%p\n", (void *)&arr[0][0]);
+    printf("\n");
 
-    printf("%p\n", (void *)p1);
-    printf("%p\n", (void *)p2);
-    printf("%p\n", (void *)p3);
-
-    printf("%p\n", (void *)(p1 + 1));
-    printf("%p\n", (void *)(p2 + 1));
-    printf("%p\n", (void *)(p3 + 1));
-
-    printf("%llu\n", (unsigned long long)(p1 + 1) - (unsigned long long)p1);
-    printf("%llu\n", (unsigned long long)(p2 + 1) - (unsigned long long)p2);
-    printf("%llu\n", (unsigned long long)(p3 + 1) - (unsigned long long)p3);
+    printf("%zu\n", sizeof(arr));
+    printf("%zu\n", sizeof(arr[0]));
+    printf("%zu\n", sizeof(arr[0][0]));
 
     return 0;
 }
