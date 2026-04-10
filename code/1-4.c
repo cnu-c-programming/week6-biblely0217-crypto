@@ -5,10 +5,10 @@ int main() {
 
     int (*p)[3][4] = arr3;
 
-    printf("%zu\n", sizeof(p));     // int (*)[3][4]
-    printf("%zu\n", sizeof(*p));    // int [3][4]
-    printf("%zu\n", sizeof(**p));   // int [4]
-    printf("%zu\n", sizeof(***p));  // int
+    printf("%zu\n", sizeof(p));     
+    printf("%zu\n", sizeof(*p));    
+    printf("%zu\n", sizeof(**p));   
+    printf("%zu\n", sizeof(***p));  
 
     printf("%p\n", (void *)p);
     printf("%p\n", (void *)(*p));
